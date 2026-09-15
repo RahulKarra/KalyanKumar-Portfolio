@@ -1,0 +1,638 @@
+<!--
+╔═════════════════════════════════╗
+| Author - Rahul Karra            |
+╚═════════════════════════════════╝
+ -->
+
+<!DOCTYPE html>
+<!--
+
+-->
+<html lang="en" data-theme="dark">
+<head>
+  <meta name="author" content="Rahul Karra">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalyan Kumar | KKinsights</title>
+
+  <!-- ✦ ANTI-FLICKER: Set theme BEFORE any paint ✦ -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('kk-theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  
+</head>
+<body class="no-transition">
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cur-ring" id="curRing"></div>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#about"        onclick="closeMenu()">About</a>
+  <a href="#services"     onclick="closeMenu()">Services</a>
+  <a href="#projects"     onclick="closeMenu()">Projects</a>
+  <a href="#testimonials" onclick="closeMenu()">Testimonials</a>
+  <a href="https://wa.me/917349556616" target="_blank" rel="noopener noreferrer" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- ══════════════════════════════════
+     NAV
+══════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-logo">KK<span>insights</span></div>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="https://wa.me/917349556616" target="_blank" rel="noopener noreferrer">Contact</a>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">
+      <span class="tog-lbl-d">☽</span>
+      <span class="tog-lbl-l">☀</span>
+      <div class="tog-thumb">
+        <svg class="tog-sun" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1"  x2="12" y2="3"/> <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/> <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1"  y1="12" x2="3"  y2="12"/> <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/> <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="tog-moon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </div>
+    </button>
+
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-vline"></div>
+
+
+  <div class="hero-photo-wrap">
+    <img class="hero-photo" src="Hero_Image.jpeg" alt="about image" loading="lazy"
+         onerror="this.parentElement.style.display='none'">
+  </div>
+
+  <div class="hero-badge" id="heroBadge">
+    <svg viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="tc" d="M74,74 m -57,0 a 57,57 0 1,1 114,0 a 57,57 0 1,1 -114,0" fill="none"/>
+      <text fill="rgba(201,168,76,0.5)" font-size="9.5" letter-spacing="3.5" font-family="DM Sans">
+        <textPath href="#tc">FOUNDER · KKinsights · DATA STRATEGY ·</textPath>
+      </text>
+    </svg>
+    <span class="hero-badge-mid">KK</span>
+  </div>
+
+  <div style="position:relative; z-index:2; max-width:950px;">
+    <div class="hero-tag reveal">Founder &amp; Lead Strategist</div>
+    <h1 class="hero-h1 reveal d1">
+      <em>Hello, I'm</em><br>
+      <span class="gold-text">Kalyan</span>
+    </h1>
+    <div class="hero-h1-name reveal d2">Kumar</div>
+    <p class="hero-sub reveal d3">
+      Founder of <span style="color:#C9A84C; font-weight:500;">KKinsights</span> — transforming complex data into strategic clarity. I help businesses unlock their potential through insight-driven solutions.
+    </p>
+    <div style="display:flex; flex-wrap:wrap; gap:1.2rem;" class="reveal d4">
+      <a href="#projects" class="btn-g">
+        View My Work
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/917349556616" target="_blank" rel="noopener noreferrer" class="btn-o">Get In Touch</a>
+    </div>
+  </div>
+
+  <div class="stats-row flex flex-wrap gap-10 mt-16 pt-10 reveal d5" style="position:relative;z-index:2;">
+    <div class="stat-item"><div class="stat-num">8+</div><div class="stat-lbl">Years Experience</div></div>
+    <div class="stat-item"><div class="stat-num">120+</div><div class="stat-lbl">Projects Delivered</div></div>
+    <div class="stat-item"><div class="stat-num">45+</div><div class="stat-lbl">Happy Clients</div></div>
+    <div class="stat-item"><div class="stat-num">98%</div><div class="stat-lbl">Satisfaction Rate</div></div>
+  </div>
+
+  <div class="scroll-ind"><span>Scroll</span><div></div></div>
+</section>
+
+<!-- ══════════════════════════════════
+     MARQUEE
+══════════════════════════════════ -->
+<div class="mq-wrap">
+  <div class="mq-track">
+    <span class="mq-item">Tech Strategy</span><span class="mq-item">Business Intelligence</span>
+    <span class="mq-item">Dashboard Design</span><span class="mq-item">Market Analysis</span>
+    <span class="mq-item">Brand Consulting</span><span class="mq-item">Product Insights</span>
+    <span class="mq-item">Growth Strategy</span>
+    <span class="mq-item">Tech Strategy</span><span class="mq-item">Business Intelligence</span>
+    <span class="mq-item">Dashboard Design</span><span class="mq-item">Market Analysis</span>
+    <span class="mq-item">Brand Consulting</span><span class="mq-item">Product Insights</span>
+    <span class="mq-item">Growth Strategy</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     ABOUT
+══════════════════════════════════ -->
+<section id="about" style="padding:8rem 4rem;">
+  <div style="max-width:1300px; margin:0 auto;">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-20 lg:gap-28 items-center">
+
+      <div class="about-frame reveal" style="max-width:460px;">
+        <img
+          id="about-photo"
+          class="about-photo"
+          src="About_img.jpg"
+          alt="Kalyan Kumar — Founder of KKinsights"
+          loading="lazy"
+          onerror="this.classList.add('error'); this.style.display='none';"
+        />
+        <!-- Shown automatically if photo fails to load -->
+        <div class="photo-fallback">
+          <div class="about-initials">KK</div>
+          <div class="about-photo-hint">Replace src with your photo  path</div>
+        </div>
+        <div class="exp-badge">
+          <div class="exp-num">8+</div>
+          <div class="exp-lbl">Years of Excellence</div>
+        </div>
+      </div>
+
+      <!-- Text Side -->
+      <div>
+        <div class="sec-eye reveal">About Me</div>
+        <h2 class="sec-title reveal d1" style="margin-bottom:1.6rem;">
+          Turning <em style="color:#C9A84C;font-style:italic;">Data</em> Into<br>Decisive Action
+        </h2>
+        <p style="color:var(--text-mid);font-size:0.98rem;line-height:1.92;margin-bottom:1.6rem;transition:color 0.45s;" class="reveal d2">
+          I'm Kalyan Kumar, founder of <strong style="color:#C9A84C;">KKinsights</strong>. With over 8 years of experience spanning business analytics, Tech strategy, and Market Research, I help organizations make smarter, faster decisions through insight-led strategies.
+        </p>
+        <p style="color:var(--text-dim);font-size:0.94rem;line-height:1.92;margin-bottom:2.8rem;transition:color 0.45s;" class="reveal d3">
+          My approach blends deep analytical thinking with creative problem-solving. Whether it's building a data infrastructure from scratch or refining an existing strategy, I bring clarity, precision, and results.
+        </p>
+
+        <div class="reveal d4" style="display:flex;flex-direction:column;gap:1.6rem;">
+          <div>
+            <div class="skill-row"><span>Tech Strategy</span><span style="color:#C9A84C;">90%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div>
+            <div class="skill-row"><span>Business Intelligence</span><span style="color:#C9A84C;">92%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div>
+            <div class="skill-row"><span>Market Research</span><span style="color:#C9A84C;">95%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+          <div>
+            <div class="skill-row"><span>Training &amp; Career Counselling</span><span style="color:#C9A84C;">97%</span></div>
+            <div class="skill-bar"><div class="skill-fill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     SERVICES
+══════════════════════════════════ -->
+<section id="services" class="section-alt" style="padding:8rem 4rem;">
+  <div style="max-width:1300px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:5rem;">
+      <div class="sec-eye reveal" style="justify-content:center;">What I Offer</div>
+      <h2 class="sec-title reveal d1" style="max-width:640px;margin:0 auto;">Services Crafted for <em class="gold-text">Impact</em></h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card svc-r svc-b reveal">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg></div>
+        <div class="svc-num">01</div>
+        <div class="svc-title">Tech Strategy &amp; Analytics</div>
+        <p class="svc-desc">End-to-end tech strategy design, KPI frameworks, and analytical infrastructure to power your business decisions with confidence.</p>
+      </div>
+      <div class="svc-card svc-r svc-b reveal d1">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <div class="svc-num">02</div>
+        <div class="svc-title">Business Intelligence</div>
+        <p class="svc-desc">Custom dashboards, real-time reporting, and BI solutions that transform raw data into clear, actionable intelligence.</p>
+      </div>
+      <div class="svc-card svc-b reveal d2">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="svc-num">03</div>
+        <div class="svc-title">Market Research</div>
+        <p class="svc-desc">Deep-dive market analysis, competitive intelligence, and consumer behavior insights that inform your strategic positioning.</p>
+      </div>
+      <div class="svc-card svc-r reveal">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div class="svc-num">04</div>
+        <div class="svc-title">Brand Consulting</div>
+        <p class="svc-desc">Strategic brand positioning and identity frameworks that connect your story with the audiences that matter most.</p>
+      </div>
+      <div class="svc-card svc-r reveal d1">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></div>
+        <div class="svc-num">05</div>
+        <div class="svc-title">Career Guidance</div>
+        <p class="svc-desc">Personalized guidance for students and early professionals — mapping career paths, building in-demand skills, and navigating key decisions with clarity and confidence.</p>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M7 12l3-3 3 2 4-5"/><path d="M9 20h6M12 16v4"/></svg></div>
+        <div class="svc-num">06</div>
+        <div class="svc-title">Training &amp; Coaching</div>
+        <p class="svc-desc">Hands-on workshops and coaching sessions that turn complex data concepts into practical, applicable skills — for teams, colleges, and individuals alike.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     VENTURE — spotlight on KKinsights, the live company site.
+     Deliberately NOT in the nav — this is a cross-promotion card,
+     not a core page section.
+══════════════════════════════════ -->
+<section id="venture" style="padding:7rem 4rem;">
+  <div style="max-width:1000px;margin:0 auto;">
+    <div class="venture-card reveal">
+      <div class="sec-eye reveal" style="justify-content:center;margin:0 auto 1.1rem;width:max-content;">The Company</div>
+      <h2 class="sec-title reveal d1" style="font-size:clamp(2.2rem,4vw,3.2rem);margin-bottom:1.2rem;">
+        Introducing <em class="gold-text">KKinsights</em>
+      </h2>
+      <p style="color:var(--text-mid);font-size:0.98rem;line-height:1.9;max-width:640px;margin:0 auto 2.4rem;" class="reveal d2">
+        Beyond individual client work, I run KKinsights — a studio bringing together web development, market research, and career mentorship under one roof. It's where the strategy on this page turns into shipped products and real career outcomes for the people we train.
+      </p>
+      <div class="reveal d3" style="display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;margin-bottom:2.6rem;">
+        <div class="stat-item"><div class="stat-num">10+</div><div class="stat-lbl">Projects</div></div>
+        <div class="stat-item"><div class="stat-num">2000+</div><div class="stat-lbl">Students</div></div>
+        <div class="stat-item"><div class="stat-num">95%</div><div class="stat-lbl">Satisfaction</div></div>
+      </div>
+      <a href="https://kkinsights.netlify.app/" target="_blank" rel="noopener" class="btn-g reveal d4">
+        Visit KKinsights
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="glimpse" style="padding:5rem 4rem;">
+  <div style="max-width:1300px;margin:0 auto;">
+    <p class="reveal" style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.2rem,2vw,1.6rem);color:rgba(245,240,232,0.55);margin-bottom:2.5rem;">
+      A few moments from the field — workshops, training sessions, and work in progress.
+    </p>
+    <div class="moments-grid">
+      <div class="moment-frame reveal">
+        <img src="IMG_7494.jpeg" alt="" loading="lazy" onerror="this.closest('.moment-frame').style.display='none'">
+      </div>
+      <div class="moment-frame reveal d1">
+        <img src="IMG_7495.jpeg" alt="" loading="lazy" onerror="this.closest('.moment-frame').style.display='none'">
+      </div>
+      <div class="moment-frame reveal d2">
+        <img src="IMG_7492.jpeg" alt="" loading="lazy" onerror="this.closest('.moment-frame').style.display='none'">
+      </div>
+      <div class="moment-frame reveal d3">
+        <img src="IMG_7493.jpeg" alt="" loading="lazy" onerror="this.closest('.moment-frame').style.display='none'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     PROJECTS
+══════════════════════════════════ -->
+<section id="projects" style="padding:8rem 0;">
+  <div style="max-width:1300px;margin:0 auto;padding:0 4rem;">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;gap:2rem;">
+      <div>
+        <div class="sec-eye reveal">Portfolio</div>
+        <h2 class="sec-title reveal d1">Selected <em class="gold-text">Works</em></h2>
+      </div>
+    </div>
+
+    <!-- Only 2 real projects now, so both get the "wide" case-study treatment
+         instead of a 3-col grid (which would leave an awkward gap).
+         EDIT the tag / title / description text below to match each PDF —
+         I couldn't open the private Drive files to pull real titles. -->
+    <div class="grid grid-cols-1 gap-6">
+      <a href="https://drive.google.com/file/d/1wCEp21Zvv50HptvoBQh--zXJkYdli_1U/view" target="_blank" rel="noopener"
+         class="proj-card proj-wide reveal" style="aspect-ratio:auto;display:block;">
+         <div class="proj-bg" style="background-image:url('voice-vision.jpg');background-size:cover;background-position:center;filter:blur(3px) brightness(0.5) saturate(2);"></div>
+        <div class="proj-overlay"></div><div class="proj-arrow">↗</div>
+        <div class="proj-inner" style="padding:3rem;min-height:220px;">
+          <div class="proj-tag">Case Study · PDF Document</div>
+          <div class="proj-title" style="font-size:2.2rem;">Voice Vision</div>
+          <p style="font-size:0.88rem;color:rgba(245,240,232,0.55);margin-top:0.6rem;max-width:580px;line-height:1.7;">AI-powered web application designed for real-time object recognition and audio feedback to assist individuals with visual impairments.</p>
+        </div>
+      </a>
+      <a href="https://drive.google.com/file/d/1nI4TqlgcbPYD8V_WqKQ9H99BpOcs2cQX/view" target="_blank" rel="noopener"
+         class="proj-card proj-wide reveal d1" style="aspect-ratio:auto;display:block;">
+         <div class="proj-bg" style="background-image:url('edu_predict.jpg');background-size:cover;background-position:center;filter:blur(3px) brightness(0.5) saturate(2);"></div>
+        <div class="proj-overlay"></div><div class="proj-arrow">↗</div>
+        <div class="proj-inner" style="padding:3rem;min-height:220px;">
+          <div class="proj-tag">Case Study · PDF Document</div>
+          <div class="proj-title" style="font-size:2.2rem;">EduPredict Student Performance Prediction Tool</div>
+          <p style="font-size:0.88rem;color:rgba(245,240,232,0.55);margin-top:0.6rem;max-width:580px;line-height:1.7;">The EduPredict Student Performance Prediction Tool is a web-based application designed for Bachelor of Computer Applications (BCA) colleges to predict academic performance in the final semester using historical student data.</p>
+        </div>
+      </a>
+
+      <div style="text-align:center;margin-top:3rem;">
+        <a href="https://github.com/KalyanKumarKK" target="_blank" rel="noopener noreferrer" class="btn-o">
+          View More Projects on GitHub
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials -->
+<section id="testimonials" class="section-alt" style="padding:8rem 4rem;">
+  <div style="max-width:1300px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:5rem;">
+      <div class="sec-eye reveal" style="justify-content:center;">Client Voice</div>
+      <h2 class="sec-title reveal d1">Words That <em class="gold-text">Matter</em></h2>
+    </div>
+
+    <!-- ══ PROFESSIONALS ══ -->
+    <div class="testi-group reveal d1">
+      <h3 class="testi-group-heading">Professionals</h3>
+      <div class="testi-carousel">
+        <button class="testi-arrow" data-prev="prof" aria-label="Previous testimonial">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="testi-viewport">
+          <div class="testi-track" id="testiTrack-prof">
+
+            <div class="testi-slide">
+              <div class="testi-card">
+                <div class="testi-q">"</div>
+                <p class="testi-text">Kalyan has been a well-behaved and disciplined student, consistently demonstrating respect for faculty and peers alike, and an active participant in both academic and extracurricular activities.
+                  He has exhibited clear leadership qualities, often taking initiative and guiding his peers toward shared goals. What stands out most, however, is his character — despite his achievements, Kalyan has remained humble and grounded. I recommend him without reservation.</p>
+                <div class="testi-auth">
+                  <img src="Ramakanth-kulkarni.jpeg" alt="Dr. Ramakant Vasantrao Kulkarni" loading="lazy" class="testi-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="testi-av" style="display:none;">RK</div>
+                  <div>
+                    <div class="testi-name">Dr. Ramakant Vasantrao Kulkarni</div>
+                    <div class="testi-role">Director of Academics, Chetan Business School – Hubli</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testi-slide">
+              <div class="testi-card">
+                <div class="testi-q">"</div>
+                <p class="testi-text">I have known Mr. Kalyankumar Tummaluru for the past six years and have had the opportunity to closely observe his personal and professional development. He is a sincere, well-mannered, and responsible individual who has consistently demonstrated a positive attitude toward learning and growth.
+                  Kalyankumar has completed his Bachelor of Computer Applications (BCA) from The Oxford College. One of his strongest qualities is his excellent interpersonal and communication skills. He interacts confidently and respectfully with people, listens attentively, and communicates his thoughts clearly and effectively.
+                  He is also known for his polite and approachable attitude, which enables him to build positive relationships with colleagues, peers, and others around him. His willingness to learn, adaptability, and professional conduct make him a promising candidate for any organization. I am confident that Kalyankumar will be a valuable addition to any team and will approach his professional responsibilities with sincerity, dedication, and a positive mindset.</p>
+                <div class="testi-auth">
+                  <img src="Manjunath-Muttalgeri.jpeg" alt="Prof. Manjunath Muttalgeri" loading="lazy" class="testi-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="testi-av" style="display:none;">MM</div>
+                  <div>
+                    <div class="testi-name">Prof. Manjunath Muttalgeri</div>
+                    <div class="testi-role">Principal, Oxford College, Hubli</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testi-slide">
+              <div class="testi-card">
+                <div class="testi-q">"</div>
+                <p class="testi-text">I am happy to share my feedback about Mr. Kalyan Sir.
+                  Mr. Kalyan Sir is an excellent Mathematics teacher with strong subject knowledge and a very clear way of explaining concepts. He is patient, dedicated, and always makes sure that students understand the topic properly rather than simply memorizing formulas.
+                  His teaching style is simple, practical, and student-friendly. His guidance and positive approach help students build confidence in Mathematics and improve their problem-solving skills.
+                  I highly appreciate his commitment, professionalism, and sincere efforts towards his students. I would gladly recommend Mr. Kalyan Sir to anyone looking for a knowledgeable and dedicated Mathematics teacher.</p>
+                <div class="testi-auth">
+                  <img src="Muhammad Dawood Kalburgi.jpeg" alt="Mr. Muhammad Dawood Kalburgi" loading="lazy" class="testi-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="testi-av" style="display:none;">MD</div>
+                  <div>
+                    <div class="testi-name">Mr. Muhammad Dawood Kalburgi</div>
+                    <div class="testi-role">Managing Director, IBA Institute, Hubli, Karnataka</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="testi-arrow" data-next="prof" aria-label="Next testimonial">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="testi-dots" id="testiDots-prof"></div>
+    </div>
+
+    <!-- ══ STUDENTS ══ -->
+    <div class="testi-group reveal d2" style="margin-top:5rem;">
+      <h3 class="testi-group-heading">Students</h3>
+      <div class="testi-carousel">
+        <button class="testi-arrow" data-prev="stud" aria-label="Previous testimonial">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="testi-viewport">
+          <div class="testi-track" id="testiTrack-stud">
+
+       
+            <div class="testi-slide">
+              <div class="testi-card">
+                <div class="testi-q">"</div>
+                <p class="testi-text">I am pleased to share few words about 
+                  Mr. Kalyan, who has been a wonderful mentor and a constant source of guidance and encouragement.
+                   He is highly knowledgeable, supportive, and approachable, always willing to share valuable insights and help me overcome challenges. His guidance has helped me develop greater confidence, improve my skills, and look at my goals with a clearer perspective.
+                   I truly appreciate his patience, motivation, and dedication towards my growth. I am grateful for his mentorship , he is truly an inspiring and supportive mentor.</p>
+                <div class="testi-auth">
+                  <img src="Dr. Grace Kankipati.jpeg" alt="Grace Full Name" loading="lazy" class="testi-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="testi-av" style="display:none;">GK</div>
+                  <div>
+                    <div class="testi-name">Dr. Grace Kankipati (PT)</div>
+                    <div class="testi-role">Consulting Physiotherapist.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+   
+            <div class="testi-slide">
+              <div class="testi-card">
+                <div class="testi-q">"</div>
+                <p class="testi-text">I just wanted to say that Kalyan has been more than just a trainer. When I started my career, he guided me and helped me learn a lot.
+                  He has strong knowledge of technology, and I have always admired the way he shares his knowledge with others. Over time, he became more like a good friend, and I really value the conversations we've had about careers, learning, and life.
+                  He has always been supportive and approachable, and I genuinely consider him a great mentor and a good friend. I'm really glad that I got the opportunity to know and learn from him.</p>
+                <div class="testi-auth">
+                  <img src="N P Vikas Kumar.jpeg" alt="N P Vikas Kumar" loading="lazy" class="testi-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="testi-av" style="display:none;">VK</div>
+                  <div>
+                    <div class="testi-name">N P Vikas Kumar</div>
+                    <div class="testi-role">Associate 2 : Financial &amp; Regulatory Reporting, State Street</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testi-slide">
+              <div class="testi-card">
+                <div class="testi-q">"</div>
+                <p class="testi-text">Kalyan played a pivotal role in both my academic development and early career journey. As a lecturer, he brought exceptional clarity, depth, and enthusiasm to Artificial Intelligence, making complex concepts accessible and engaging for the entire class. His teaching went beyond textbooks, instilling a practical understanding of the subject that proved invaluable after graduation.
+                  Beyond the classroom, Kalyan demonstrated a genuine commitment to his students' long-term success. He personally guided me during my transition into the professional world, helping me secure my first role as a trainer. His mentorship, encouragement, and industry insights gave me the confidence to step into a training career successfully.
+                  I am deeply grateful for his dedication as both an educator and a career mentor. Any institution, organization, or student would be fortunate to work with him.</p>
+                <div class="testi-auth">
+                  <img src="Bibi Ayesha R Bepari.jpeg" alt="Bibi Ayesha R Bepari" loading="lazy" class="testi-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                  <div class="testi-av" style="display:none;">AB</div>
+                  <div>
+                    <div class="testi-name">BiBi Ayesha R Bepari</div>
+                    <div class="testi-role">Operations &amp; Compliance Associate, Blue Matrix Connect</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="testi-arrow" data-next="stud" aria-label="Next testimonial">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="testi-dots" id="testiDots-stud"></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     FOOTER — restructured & fixed
+══════════════════════════════════ -->
+<footer>
+  <!-- Large watermark text — right side, high transparency -->
+  <div class="footer-watermark">KKINSIGHTS</div>
+
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <!-- Brand column -->
+      <div>
+        <div class="footer-brand-logo">KK<span>insights</span></div>
+        <p class="footer-tagline">
+          Transforming data into strategic advantage. Founded by Kalyan Kumar — your partner in insight-driven growth.
+        </p>
+        <div class="footer-social">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/kalyan-kumar-tummaluru-b29069240/" class="soc-btn soc-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <!-- WhatsApp -->
+          <a href="https://wa.me/917349556616" class="soc-btn soc-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.37c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.55-3.7 8.22-8.24 8.22zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.17 1.74 2.65 4.22 3.72.59.25 1.05.4 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.19.21-.58.21-1.08.15-1.19-.06-.1-.23-.17-.48-.29z"/>
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/____mr_kk____?igsi=MXJ4MTg4bDJueG5rZw==" class="soc-btn soc-instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/KalyanKumarKK" class="soc-btn soc-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navigation column -->
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <a href="#about"        class="f-nav-link">About</a>
+        <a href="#services"     class="f-nav-link">Services</a>
+        <a href="#projects"     class="f-nav-link">Projects</a>
+        <a href="#testimonials" class="f-nav-link">Testimonials</a>
+        <a href="https://wa.me/917349556616" class="f-nav-link">Contact</a>
+      </div>
+
+      <!-- Contact Info column — updated from screenshot -->
+      <div>
+        <div class="footer-col-title">Contact Info</div>
+        <div class="f-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <a href="mailto:kalyankumartummaluru@gmail.com">kalyankumartummaluru@gmail.com</a>
+        </div>
+        <div class="f-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Hubli, Karnataka, India</span>
+        </div>
+        <div class="f-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12 19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>+91 7349556616</span>
+        </div>
+
+        <div class="f-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          <a href="https://kkinsights.netlify.app/" target="_blank" rel="noopener">kkinsights.netlify.app</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 <span>KKinsights</span>. All rights reserved. Crafted with precision.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="scrollTop" class="scroll-top-btn" aria-label="Scroll to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<!-- ══════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════ -->
+<script src="script.js"></script>
+</body>
+</html>
